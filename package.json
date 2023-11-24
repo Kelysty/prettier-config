@@ -1,0 +1,45 @@
+{
+  "name": "@kelysty/prettier-config",
+  "version": "1.0.0",
+  "description": "Kelysty UI Prettier configuration",
+  "license": "MIT",
+  "author": "Kelysty",
+  "contributors": [
+    "Ivan Postarnak"
+  ],
+  "keywords": [
+    "prettier",
+    "config"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kelysty/prettier-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kelysty/prettier-config.git/issues"
+  },
+  "homepage": "https://github.com/Kelysty/prettier-config.git#readme",
+  "scripts": {
+    "prepare": "husky install",
+    "prettier": "prettier '**/*.{js,md,yaml,yml,json}' --config .prettierrc.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "husky": "^8.0.3",
+    "nano-staged": "^0.8.0",
+    "prettier": "^3.1.0"
+  },
+  "peerDependencies": {
+    "prettier": "*"
+  },
+  "nano-staged": {
+    "*.{js,md,yaml,yml,json}": [
+      "prettier --write"
+    ]
+  }
+}
